@@ -1,0 +1,9 @@
+{
+  "jsondata": {
+    "level1": {
+      "level2": {
+        "level3": ["printthis"]
+      }
+    }
+  }
+}
