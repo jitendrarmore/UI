@@ -18,10 +18,10 @@ COPY . /opt/src/app
 ENV APP_ENV development
 
 # Exposing Ports
-EXPOSE 5035
+EXPOSE 5000
 
 # Setting Persistent data
 VOLUME ["/app-data"]
 
 # Running Python Application
-CMD ["python", "app.py"]
+CMD ["python", "/opt/src/app/app.py"]
