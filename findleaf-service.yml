@@ -1,0 +1,35 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "findleaf",
+    "namespace": "default",
+    "selfLink": "/api/v1/namespaces/default/services/findleaf",
+    "uid": "4df928be-9830-11e9-8723-080027bbf95a",
+    "resourceVersion": "86217",
+    "creationTimestamp": "2019-06-26T16:34:44Z",
+    "labels": {
+      "run": "findleaf"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 5000,
+        "targetPort": 5000,
+        "nodePort": 32585
+      }
+    ],
+    "selector": {
+      "run": "findleaf"
+    },
+    "clusterIP": "10.110.181.240",
+    "type": "NodePort",
+    "sessionAffinity": "None",
+    "externalTrafficPolicy": "Cluster"
+  },
+  "status": {
+    "loadBalancer": {}
+  }
+}

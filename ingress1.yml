@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: findleaf
+spec:
+  tls:
+    - hosts: 
+      - '*.karmalab.net'
+    - secretName: test.karmalab.com-tls
+    
+  rules:
+  - host: karmalab.net 
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: findleaf
+          servicePort: 5000
