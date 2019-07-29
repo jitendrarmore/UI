@@ -1,5 +1,5 @@
 FROM python:2.7
-MAINTAINER XenonStack
+MAINTAINER JItendra More
 
 # Creating Application Source Code Directory
 RUN mkdir -p /opt/src
